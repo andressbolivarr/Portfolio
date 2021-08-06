@@ -133,9 +133,9 @@ a{
     transition: all .4s;
   }
 section{
-    margin-top: 10rem;
+    margin-top: 5rem;
     width: 100%;
-    height: 55rem;
+    height: 50rem;
     /* background-color: lightseagreen;  */
     display: flex;
     flex-direction: column;
@@ -152,6 +152,7 @@ section{
 }
 .column{
     width: 94%;
+    height: 55rem;
 }
 .skills-list{
     list-style: default;
@@ -159,6 +160,7 @@ section{
     flex-direction: column;
     font-size: 1.75em;
     font-weight: 700;
+    height: 8rem;
 }
 .skills-list > li {
     font-size: 1.75em;
@@ -200,6 +202,76 @@ h3{
     width: 100%;
     display: flex;
     align-content: center;
-    justify-content: center; 
     justify-content: space-between;
+}
+.alt > h1{
+    max-width: 100%;
+    text-shadow: -1px 0 white, 
+    0 1px white, 1px 0 white, 0 -1px white;
+    color: black;
+}
+b{
+    font-weight: 600;
+    line-height: 25px;
+    font-size: 30px;
+}
+.stack{
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 35rem;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    font-size: 1.7em;
+}
+.overflow-clip {
+    text-overflow: clip;
+  }
+.closer{
+    margin-top: -1em;
+}
+.bigger{
+    height: 65rem;
+    margin-top: 10rem;
+}
+footer{
+    height: 40rem;
+    width: 100%;
+}
+.stack-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+}
+.material-icons{
+    font-size: 3rem;
+    position: relative;
+    bottom: -.2em;
+}
+.stack-column > h3:hover{
+    transform: scale(1.5)
+}
+.bottom-content{
+    margin-top: 10rem;
+    width: 94%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.bottom-nav{
+    width: 100%;
+    max-width: auto;
+    height: 7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.bottom-nav > ul > li{
+    font-weight: 500;
+    font-size: 1.5em;
+    word-wrap: break-word;
+    letter-spacing: default;
 }
