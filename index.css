@@ -1,0 +1,205 @@
+body {
+    background-color: black;
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    color: white;
+    margin: 0;
+}
+header{
+    margin-top: 1.5rem;
+    height: 90px;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+nav{
+    position: fixed;
+    width: 94%;
+    max-width: auto;
+    /* background-color: red; */
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+li, p{
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 400;
+    margin-left: 1em;
+    letter-spacing: 5px;
+}
+.container{
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center; 
+}
+.name{
+    height: 35rem;
+    width: 94%;
+    /* background-color: lightblue;  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+}
+h1{
+    font-size: 8.125em;
+    font-weight: 700;
+}
+h2{
+    margin-top: -1.5em;
+    color: black;
+    text-shadow: -1px 0 white, 
+    0 1px white, 1px 0 white, 0 -1px white;
+    font-weight: 600;
+    font-size: 3.45rem;
+}
+.rotating-img{
+    width: 99%;
+    height: 12rem;
+    display: flex;
+    align-content: center;
+    justify-content: center; 
+    animation: rotation 10s infinite linear;
+}
+.rotate {
+    animation: rotation 10s infinite linear;
+  }
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+main{
+    margin-top: 10rem;
+    height: 55rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.alt{
+    width: 94%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+} 
+.left-content{
+    width: 30%;
+}
+.bio{
+    font-size: 1.8em;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: normal;
+}
+.right-content{
+    width: 60%;
+    display:flex;
+    flex-direction: row;
+    margin-right: -6em; 
+}
+img{
+    width: auto;
+    max-width: 100%;
+    transition: .2s ease-in-out;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.line::after{
+    content: "";
+    width: 0%;
+    height: 1px;
+    display: block;
+    background-color: #fff;
+    transition: all .4s ease-in-out;
+  }
+.line:hover::after{
+    width: 100%;
+    transition: all .4s;
+  }
+section{
+    margin-top: 10rem;
+    width: 100%;
+    height: 55rem;
+    /* background-color: lightseagreen;  */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+.section-nav{
+    width: 100%;
+}
+.skills{
+    width: 100%;
+}
+.column{
+    width: 94%;
+}
+.skills-list{
+    list-style: default;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.75em;
+    font-weight: 700;
+}
+.skills-list > li {
+    font-size: 1.75em;
+    font-weight: 700;
+    text-shadow: -1px 0 white, 
+    0 1px white, 1px 0 white, 0 -1px white;
+    color: black;   
+}
+.skills-list > li > a{
+    font-size: 1.75em;
+    font-weight: 700;
+    text-shadow: -1px 0 white, 
+    0 1px white, 1px 0 white, 0 -1px white;
+    color: black;   
+}
+h3{
+    font-size: 2.75em;
+    font-weight: 700;
+    text-shadow: -1px 0 white, 
+    0 1px white, 1px 0 white, 0 -1px white;
+    color: black;  
+    transition: .7s ease-in-out;
+}
+.grid1{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    grid-auto-rows: minmax(5em, auto);
+}
+.card{
+    background-color: transparent;
+    transition: .2s ease-in-out;
+}
+.card2:hover{
+    transition: .5s ease-in-out;
+    transform: scale(.90);
+}
+.card-container{
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center; 
+    justify-content: space-between;
+}
