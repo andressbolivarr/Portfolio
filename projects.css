@@ -91,15 +91,16 @@ a{
     justify-content: center;
     align-content: center;
     align-items: center;
-    margin: 40rem auto 10rem auto;
+    margin: 2rem auto 10rem auto;
 }
 .grid1{
+    width: 95%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: .75em;
+    gap: 1em;
     grid-auto-rows: minmax(5em, auto);
+    margin: 0 auto;
 }
-
 .card{
     background-color: transparent;
     transition: .2s ease-in-out;
@@ -117,7 +118,7 @@ a{
 .aa{
     cursor: pointer;
     color: white;
-    margin-top: 40rem;
+    margin-top: 5rem;
     border: none;
     background-color: transparent;
     font-size: 3rem;
@@ -129,6 +130,7 @@ a{
 }
 /* -----------------GET IN TOUCH SECTION------------------ */
 .alt > h1{
+    height: auto;
     max-width: 100%;
     text-shadow: -1px 0 white, 
     0 1px white, 1px 0 white, 0 -1px white;
@@ -138,7 +140,7 @@ a{
     white-space: nowrap;
     overflow: hidden;
     z-index: -1;
-    margin-top: 10rem; 
+    margin-top: 5rem; 
     flex-direction: column;
     width: 100%;
     position: relative;
@@ -150,9 +152,6 @@ a{
 .closer{
     margin-top:-.3em;
 }
-
-
-
 /* -----------------FOOTER------------------ */
 footer{
     height: 35rem;
@@ -193,7 +192,7 @@ h3 a{
     cursor: pointer;
 }
 .bottom-content{
-    margin-top: rem;
+    margin-top: 5rem;
     width: 94%;
     display: flex;
     align-content: center;
