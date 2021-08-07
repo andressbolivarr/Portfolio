@@ -153,6 +153,7 @@ a{
     justify-content: center;
     align-content: center;
     align-items: center;
+    margin-top: 20rem;
     /* margin-bottom: 5rem; */
   }
 section{
@@ -266,7 +267,16 @@ b{
 }
 .overflow-clip {
     text-overflow: clip;
-  }
+    font-size: 6rem;
+}
+.stack-column{
+    margin-top: -5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+}
 .closer{
     margin-top: -1em;
 }
@@ -278,15 +288,9 @@ footer{
     justify-content: center;
     align-items: center;
     align-content: center;
+    margin-top: 10rem;
 }
-.stack-column{
-    margin-top: -5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    align-content: center;
-}
+
 .material-icons{
     font-size: 3rem;
     position: relative;
@@ -390,6 +394,11 @@ body::-webkit-scrollbar {
          width: 100%;
          margin: 0 auto;
      }
+     .right-content{
+        width: 100%;
+        justify-content: center;
+        margin-left: 1em;
+    }
      .left-content h1{
          font-size: 6rem;
      }
