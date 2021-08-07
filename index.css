@@ -16,7 +16,6 @@ nav{
     position: fixed;
     width: 94%;
     max-width: auto;
-    /* background-color: red; */
     height: 4rem;
     display: flex;
     flex-direction: row;
@@ -46,9 +45,8 @@ li, p{
     display: flex;
     align-content: center;
     justify-content: center;
-    margin-top: 40rem; 
+    margin-top: -2.3rem; 
 }
-
 .name{
     height: 35rem;
     width: 94%;
@@ -71,8 +69,8 @@ h2{
     font-size: 3.45rem;
 }
 .rotating-img{
-    width: 99%;
-    height: 12rem;
+    width: 94%;
+    height: 11rem;
     display: flex;
     align-content: center;
     justify-content: center; 
@@ -105,7 +103,12 @@ main{
     align-items: center;
 } 
 .left-content{
-    width: 30%;
+    width: 35%;
+    text-transform: uppercase;
+}
+.left-content p{
+    line-height: 45px;
+    font-weight: 500;
 }
 .bio{
     font-size: 1.8em;
@@ -137,8 +140,19 @@ a{
     transition: all .4s ease-in-out;
   }
 .line:hover::after{
-    width: 100%;
+    width: 94%;
     transition: all .4s;
+  }
+  article{
+    width: 100%;
+    height: 85rem;
+    /* background-color: lightseagreen;  */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    /* margin-bottom: 5rem; */
   }
 section{
     width: 100%;
@@ -158,6 +172,9 @@ section{
     width: 100%;
 }
 .column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 94%;
     height: 55rem;
 }
@@ -191,6 +208,10 @@ h3{
     color: black;  
     transition: .7s ease-in-out;
 }
+h3 a{
+    color: black;
+}
+
 .grid1{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -225,7 +246,8 @@ b{
 .stack{
     white-space: nowrap;
     overflow: hidden;
-    margin-top: 35rem;
+    z-index: -1;
+    margin-top: 7rem; 
     flex-direction: column;
     width: 100%;
     position: relative;
@@ -237,19 +259,21 @@ b{
 .closer{
     margin-top: -1em;
 }
-.bigger{
-    height: 65rem;
-    margin-top: 10rem;
-}
 footer{
-    height: 40rem;
-    width: 100%;
+    height: 35rem;
+    width: 94%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 .stack-column{
+    margin-top: -5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     align-content: center;
 }
 .material-icons{
@@ -258,10 +282,11 @@ footer{
     bottom: -.2em;
 }
 .stack-column > h3:hover{
-    transform: scale(1.5)
+    transform: scale(1.5);
+    cursor: pointer;
 }
 .bottom-content{
-    margin-top: 10rem;
+    margin-top: 15rem;
     width: 94%;
     display: flex;
     align-content: center;
@@ -276,9 +301,9 @@ footer{
     justify-content: space-between;
     align-items: center;
 }
-.bottom-nav > ul > li{
+.bottom-nav > .list > ul > li{
     font-weight: 500;
-    font-size: 1.5em;
+    font-size: 1.45em;
     word-wrap: break-word;
     letter-spacing: default;
 }
@@ -292,4 +317,154 @@ body::-webkit-scrollbar {
    
   body::-webkit-scrollbar-thumb {
     background-color: white;
+  }
+  @media only screen and (min-width:0px) and (max-width: 480px){
+     header{
+         margin-top: 0;
+         width: 90%;
+         max-width: 100%;
+     }
+     nav{
+        /* background-color: rosybrown; */
+        width: 100%;
+        max-width: 100%;
+        position: absolute;
+        justify-content: space-around; 
+     }
+     nav ul{
+         list-style: none;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         margin-top: 4rem;
+     }
+     .city{
+         margin-top: 4rem;
+     }
+     nav ul li{
+         margin-top: .5rem;
+     }
+     .container{
+         max-width: 100%;
+     }
+     .name{
+         width: 90%;
+         max-width: 100%;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+     }
+     .name h1{
+         font-size: 6rem;
+     }
+     .name h2{
+         margin-top: -1.5rem;
+     }
+     main{
+         height: 85rem;
+         padding-top: 15rem;
+         max-width: 100%;
+         width: 94%;
+        }
+     .alt{
+         flex-direction: column;
+         justify-content: center;
+         text-align: center;
+         align-content: center;
+         margin: 0 auto;
+         }
+     .left-content, .right-content{
+         max-width: 100%;
+         text-align: center;
+         width: 100%;
+         margin: 0 auto;
+     }
+     .left-content h1{
+         font-size: 6rem;
+     }
+      section{
+        height: 35rem;
+         padding-bottom: 25rem;
+         max-width: 100%;
+         width: 94%;
+     } 
+      .column{
+        z-index: 1;
+        margin: auto auto 0 auto;
+        text-align: center;
+     }
+     .column h1{
+        font-size: 6rem;
+     }
+     .section-nav{
+         max-width: 100%;
+         margin: 0 auto;
+         text-align: center;
+     }
+     .section-nav h1{
+         font-size: 6rem;
+     }
+     .skills{
+        width: 100%;
+        max-width: 100%;
+     }
+     .skills-list li {
+         margin-left: -2rem;
+         font-size: 1em;
+         flex-direction: column;
+         list-style: none;
+         text-align: center;
+         word-wrap:break-word
+     }
+     .grid1{
+         grid-template-columns: repeat(1,1fr);
+     }
+     .container2{
+         margin-bottom: -55rem;
+     }  
+     article{
+        margin: 0 auto;
+        width: 85%;
+        max-width: 100%;
+        padding-bottom: 10rem;
+    }
+    article .column h1{
+        font-size: 5rem;
+    }
+     .hide{
+        display: none;
+    }
+    footer{
+        text-align: center;
+        width: 95%;
+        height: auto;
+        max-width: 100%;
+        margin-top: 100rem;
+        word-wrap: normal;
+        word-break: break-all;
+    }
+    .bottom-content{
+        margin: 0 auto;
+        margin-top: 5rem;
+        width: 85%;
+        max-width: 100%;
+     }
+     .bottom-nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: -2.1rem;
+    }
+     .bottom-nav ul{
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+     }
+     .bottom-nav ul li{
+         padding-top: 1rem;
+     }
   }
