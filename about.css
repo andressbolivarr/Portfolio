@@ -309,7 +309,7 @@ body::-webkit-scrollbar {
          margin-top: 5rem;
      }
      .name{
-         width: 100%;
+         width: 90%;
          max-width: 100%;
          justify-content: center;
          align-items: center;
@@ -322,13 +322,13 @@ body::-webkit-scrollbar {
      .name h1{
          font-size: 7rem;
          line-height: 5rem;
-         margin-right: -.2em;
      }
      .name p{
         text-transform: none;
          font-weight: 500;
-         font-size: 25px;
-         line-height: 25px;
+         font-size: 30px;
+         line-height: 30px;
+         margin-left: -.5rem;
      }
 main{
     margin-top: -25rem;
@@ -352,7 +352,7 @@ main{
 .left-content h1{
     line-height: 4rem;
     margin-top: -2rem;
-    font-size: 4rem;
+    font-size: 3.32rem;
     word-wrap: break-word
 }
 img{

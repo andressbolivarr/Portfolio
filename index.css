@@ -486,4 +486,26 @@ body::-webkit-scrollbar {
      .bottom-nav ul li{
          padding-top: 1rem;
      }
+     .rotating-img{
+         height: 100%;
+        max-width: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center; 
+        animation: rotation 0s infinite linear;
+        margin: 0 auto;
+
+    }
+    .rotate {
+        width: 60%;
+        animation: rotation 10s infinite linear;
+      }
+      @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(180deg);
+        }
+      }
   }
