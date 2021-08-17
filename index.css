@@ -1,8 +1,12 @@
+html {
+    scroll-behavior: smooth;
+  }
 body {
     background-color: black;
     font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
     color: white;
     margin: 0;
+    z-index: 1;
 }
 header{
     margin-top: 1.5rem;
@@ -188,14 +192,28 @@ section{
     font-weight: 700;
     height: 8rem;
 }
-.skills-list > li {
+.skills-list > .hide > li {
     font-size: 1.75em;
     font-weight: 700;
     text-shadow: -1px 0 white, 
     0 1px white, 1px 0 white, 0 -1px white;
     color: black;   
 }
-.skills-list > li > a{
+.skills-list > .hide > li > a{
+    font-size: 1.75em;
+    font-weight: 700;
+    text-shadow: -1px 0 white, 
+    0 1px white, 1px 0 white, 0 -1px white;
+    color: black;   
+}
+.skills-list > .hide-desk > li {
+    font-size: .9em;
+    font-weight: 700;
+    text-shadow: -1px 0 white, 
+    0 1px white, 1px 0 white, 0 -1px white;
+    color: black;   
+}
+.skills-list > .hide-desk > li > a{
     font-size: 1.75em;
     font-weight: 700;
     text-shadow: -1px 0 white, 
@@ -254,6 +272,9 @@ b{
     width: 100%;
     position: relative;
     font-size: 1.7em;
+}
+.hide-desk{
+    display: none;
 }
 .aa{
     cursor: pointer;
@@ -452,6 +473,9 @@ body::-webkit-scrollbar {
     }
      .hide{
         display: none;
+    }
+    .hide-desk{
+        display: block;
     }
     footer{
         text-align: center;
