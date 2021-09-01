@@ -49,6 +49,7 @@ li, p{
     padding-bottom: 20rem;
     margin-bottom: 20rem;
     margin-top: 2rem;
+    
 }
 .hide-desk{
     display: none;
@@ -56,8 +57,8 @@ li, p{
 .name{
     text-align: center;
     height: 35rem;
-    width: 94%;
-    /* background-color: lightblue;  */
+    width: 90%;
+     
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,10 +114,7 @@ img{
     max-width: 100%;
     transition: .2s ease-in-out;
 }
-a{
-    text-decoration: none;
-    color: white;
-}
+
 /* -----------------HOVER EFFECTS------------------ */
 a{
     text-decoration: none;
@@ -129,6 +127,7 @@ a{
     display: block;
     background-color: #fff;
     transition: all .4s ease-in-out;
+
 }
 .line:hover::after{
     width: 100%;
@@ -181,8 +180,12 @@ a{
     color: black;
 }
 /* -----------------GET IN TOUCH SECTION------------------ */
+.alt{
+    padding-bottom: 10rem;
+}
 .alt > h1{
     height: auto;
+    font-size: 7rem;
     max-width: 100%;
     text-shadow: -1px 0 white, 
     0 1px white, 1px 0 white, 0 -1px white;
@@ -200,9 +203,25 @@ a{
 }
 .overflow-clip {
     text-overflow: clip;
-  }
+    font-size: 6rem;
+}
+.stack-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+}
+.stack-column h1 {
+    font-size: 7rem;
+}
 .closer{
-    margin-top: -.1em;
+    margin-top: -.8em;
+}
+.normal{
+        font-size: 7em;
+        font-weight: 700;
+        line-height: 7rem;
 }
 /* -----------------FOOTER------------------ */
 footer{
@@ -215,7 +234,6 @@ footer{
     align-content: center;
 }
 .stack-column{
-    margin-top: -3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -238,10 +256,6 @@ h3 a{
     font-size: 3rem;
     position: relative;
     bottom: -.2em;
-}
-.stack-column > h3:hover{
-    transform: scale(1.5);
-    cursor: pointer;
 }
 .bottom-content{
     margin-top: 5rem;
@@ -326,7 +340,7 @@ body::-webkit-scrollbar {
      .name p{
         text-transform: none;
          font-weight: 500;
-         font-size: 30px;
+         font-size: 1.75em;
          line-height: 30px;
          margin-left: -.5rem;
      }
@@ -375,7 +389,6 @@ a{
 }
     .aa{
         text-align: center;
-        margin-top: 4rem;
     }
      .hide{
         display: none;
@@ -415,5 +428,5 @@ a{
      }
      .bottom-nav ul li{
          padding-top: 1rem;
-     }
+     }  
   }
