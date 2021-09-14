@@ -19,7 +19,6 @@ img{
     transition: .2s ease-in-out;
 }
 nav{
-    position: fixed;
     width: 94%;
     max-width: auto;
     height: 4rem;
