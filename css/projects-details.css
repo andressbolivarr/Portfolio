@@ -1,0 +1,392 @@
+body {
+    background-color: black;
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    color: white;
+    margin: 0;
+}
+/* -----------------HEADER------------------ */
+header{
+    margin-top: 1.5rem;
+    height: 90px;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+} 
+img{
+    width: auto;
+    max-width: 100%;
+    transition: .2s ease-in-out;
+}
+nav{
+    width: 94%;
+    max-width: auto;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+li, p{
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 400;
+    margin-left: 1em;
+    letter-spacing: 5px;
+}
+/* -----------------CONTENT------------------ */
+.container{
+    width: 70%;
+    display: flex;
+    align-content: center;
+    justify-content: flex-start; 
+}
+.hide-desk{
+    display: none;
+}
+.name{
+    height: 35rem;
+    width: 80%;
+    /* background-color: lightblue;  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 5rem; 
+}
+h1{
+    font-size: 7em;
+    font-weight: 700;
+    line-height: 7rem;
+}
+/* -----------------HOVER EFFECTS------------------ */
+a{
+    text-decoration: none;
+    color: white;
+}
+.line::after{
+    content: "";
+    width: 0%;
+    height: 1px;
+    display: block;
+    background-color: #fff;
+    transition: all .4s ease-in-out;
+  }
+.line:hover::after{
+    width: 100%;
+    transition: all .4s;
+  }
+/* -----------------GRID SECTION------------------ */
+  article{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 2rem auto 10rem auto;
+}
+.grid1{
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    grid-auto-rows: minmax(5em, auto);
+    margin: 0 auto;
+}
+.card{
+    background-color: transparent;
+    transition: .2s ease-in-out;
+}
+.card2:hover{
+    transition: .5s ease-in-out;
+    transform: scale(.90);
+}
+.card-container{
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+.aa{
+    cursor: pointer;
+    color: white;
+    margin-top: 5rem;
+    border: none;
+    background-color: transparent;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    text-shadow: -1px 0 white, 
+    0 1px white, 1px 0 white, 0 -1px white;
+    color: black;
+}
+/* -----------------GET IN TOUCH SECTION------------------ */
+.alt{
+    padding-bottom: 10rem;
+}
+.alt > h1{
+    height: auto;
+    max-width: 100%;
+    text-shadow: -1px 0 white, 
+    0 1px white, 1px 0 white, 0 -1px white;
+    color: black;
+}
+.stack{
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: -1;
+    margin-top: 5rem; 
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    font-size: 1.7em;
+}
+.overflow-clip {
+    text-overflow: clip;
+    font-size: 6rem;
+}
+.stack-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+}
+.closer{
+    margin-top: -1em;
+}
+.normal{
+        font-size: 7em;
+        font-weight: 700;
+        line-height: 7rem;
+}
+/* -----------------FOOTER------------------ */
+footer{
+    height: 35rem;
+    width: 94%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.stack-column{
+    margin-top: -5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+    width: 80%;
+}
+h3{
+    font-size: 2.75em;
+    font-weight: 700;
+    text-shadow: -1px 0 white, 
+    0 1px white, 1px 0 white, 0 -1px white;
+    color: black;  
+    transition: .7s ease-in-out;
+}
+h3 a{
+    color: black;
+}
+.material-icons{
+    font-size: 3rem;
+    position: relative;
+    bottom: -.2em;
+}
+.bottom-content{
+    margin-top: 5rem;
+    width: 94%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.bottom-nav{
+    width: 100%;
+    max-width: auto;
+    height: 7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.bottom-nav > .list > ul > li{
+    font-weight: 500;
+    font-size: 1.45em;
+    word-wrap: break-word;
+    letter-spacing: default;
+}
+body::-webkit-scrollbar {
+    width: 2px;
+  }
+   
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px transparent;
+  }
+   
+  body::-webkit-scrollbar-thumb {
+    background-color: white;
+  }
+
+  /* -----------------RESPONSIVE MOBILE DESIGN------------------ */
+  @media only screen and (min-width:0px) and (max-width: 480px){
+     header{
+         margin-top: 0;
+         width: 90%;
+         max-width: 100%;
+     }
+     nav{
+        /* background-color: rosybrown; */
+        width: 100%;
+        max-width: 100%;
+        position: absolute;
+        justify-content: space-around; 
+     }
+     nav ul{
+         list-style: none;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         margin-top: 4rem;
+     }
+     .city{
+         margin-top: 4rem;
+     }
+     nav ul li{
+         margin-top: .5rem;
+     }
+     .container{
+         max-width: 100%;
+         margin-top: 5rem;
+     }
+     .name{
+         width: 80%;
+         max-width: 100%;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+     }
+     .name h1{
+         font-size: 4rem;
+         line-height: 5rem;
+     }
+     .name h2{
+         margin-top: -1.5rem;
+     }
+     main{
+         height: 85rem;
+         padding-top: 15rem;
+         max-width: 100%;
+         width: 94%;
+        }
+     .alt{
+         flex-direction: column;
+         justify-content: center;
+         text-align: center;
+         align-content: center;
+         margin: 0 auto;
+         }
+     .left-content, .right-content{
+         max-width: 100%;
+         text-align: center;
+         width: 100%;
+         margin: 0 auto;
+     }
+     .left-content h1{
+         font-size: 6rem;
+     }
+      section{
+        height: 35rem;
+         padding-bottom: 25rem;
+         max-width: 100%;
+         width: 94%;
+     } 
+      .column{
+        z-index: 1;
+        margin: auto auto 0 auto;
+        text-align: center;
+     }
+     .column h1{
+        font-size: 6rem;
+     }
+     .section-nav{
+         max-width: 100%;
+         margin: 0 auto;
+         text-align: center;
+         padding-bottom: auto;
+     }
+     .section-nav h1{
+         font-size: 6rem;
+     }
+     .skills{
+        width: 100%;
+        max-width: 100%;
+     }
+     .skills-list li {
+         margin-left: -2rem;
+         font-size: 1em;
+         flex-direction: column;
+         list-style: none;
+         text-align: center;
+         word-wrap:break-word
+     }
+     .grid1{
+         grid-template-columns: repeat(1,1fr);
+     }
+     article{
+        margin: 5rem auto 10rem auto;
+        width: 85%;
+        max-width: 100%;
+    }
+    article .column h1{
+        font-size: 5rem;
+    }
+    .aa{
+        text-align: center;
+        margin-top: 4rem;
+    }
+     .hide{
+        display: none;
+    }
+    footer{
+        text-align: center;
+        width: 95%;
+        height: auto;
+        max-width: 100%;
+        margin-top: 10rem;
+        word-wrap: normal;
+        word-break: break-all;
+    }
+    .bottom-content{
+        margin: 10rem auto 0 auto;
+        margin-top: 5rem;
+        width: 85%;
+        max-width: 100%;
+     }
+     .bottom-nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: -2.1rem;
+    }
+     .bottom-nav ul{
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+     }
+     .bottom-nav ul li{
+         padding-top: 1rem;
+     }
+  }
