@@ -238,13 +238,58 @@ h3 a{
     grid-auto-rows: minmax(5em, auto);
 }
 .card{
-    background-color: transparent;
-    transition: .2s ease-in-out;
+    background-color: black;
+    transition: .4s ease-in-out;
+    cursor: pointer;
 }
-.card2:hover{
-    transition: .5s ease-in-out;
-    transform: scale(.90);
+/* CARD CONTENT ANIMATION */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: auto;
 }
+
+.card h2 {
+    margin: 0;
+    z-index: 200;
+}
+
+.card-content {
+    position: fixed;
+    cursor: auto;
+    padding: 100px 25px 25px;
+    overflow-y : scroll;
+    height: 100%;
+    color: #fff;
+}
+.card-content .center {
+    width: 100%;
+    background-color: red;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 10px;
+    animation: slideDown 0.5s ease-out 0.2s forwards;
+}
+.card-content .center img {
+    width: 30%;
+    margin: auto; 
+    animation: slideDown 0.5s ease-out 0.2s forwards;
+}
+.card-content p {
+    color: white;
+    animation: slideDown 0.5s ease-out 0.4s forwards;
+}
+@keyframes slideDown {
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* CARD CONTENT SECTION END */
 .card-container{
     width: 100%;
     display: flex;
