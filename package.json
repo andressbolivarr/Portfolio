@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/andressbolivarr/Portfolio/issues"
   },
-  "homepage": "https://github.com/andressbolivarr/Portfolio#readme"
+  "homepage": "https://github.com/andressbolivarr/Portfolio#readme",
+  "dependencies": {
+    "@barba/core": "^2.9.7"
+  }
 }
