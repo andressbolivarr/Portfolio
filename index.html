@@ -8,17 +8,19 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro" rel="stylesheet">
-    <script src="anime.js"></script>
     <link rel="stylesheet" href="css/index.css">
     <title>Andres Bolivar</title>
 </head>
-<body>
-    <header>
+<body data-barba="wrapper">
+    <div class="load-container">
+        <div class="loading-screen"></div>
+    </div>
+    <header data-barba="container">
         <nav>
-            <ul>
-                <li><a href="index.html" class="line">Home</a></li>
-                <li><a href="projects.html" class="line">Projects</a></li>
-                <li><a href="about.html" class="line">About</a></li>
+            <ul class="transition">
+                <li><a href="index.html" class="line home">Home</a></li>
+                <li><a href="projects.html" class="line projects">Projects</a></li>
+                <li><a href="about.html" class="line about">About</a></li>
             </ul>
             <div class="city">
                 <p>Caracas</p>
@@ -26,8 +28,8 @@
             </div>
         </nav>
     </header>
-    <div class="container">
-        <div class="name">
+    <div class="container" data-barba-namespace="home">
+        <div class="name container">
             <h1>Andrés Bolívar</h1>
             <h2>Front End Developer</h2>
         </div>
@@ -179,145 +181,9 @@
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        const cardImages = ['one', 'two', 'three', 'four', 'five', 'six']
-
-        function selectImages(cardImages) { 
-            switch(new `${type}`.getType()){
-                case 1 :
-                    cardImages = 0;
-                break;
-
-                case 2: 
-                    cardImages = 1;
-                break;
-
-                case 3: 
-                    cardImages = 2;
-                break;
-
-                case 4: 
-                    cardImages = 3;
-                break;
-
-                case 5: 
-                    cardImages = 4;
-                break;
-
-                case 6: 
-                    cardImages = 5;
-                break;
-            }
-        }
-        const cards = document.querySelectorAll('.card');
-		
-		const toggleExpansion = (element, to, duration = 350) => {
-		  return new Promise((res) => {
-		    element.animate([
-		      {
-			top: to.top,
-			left: to.left,
-			width: to.width,
-			height: to.height
-		      }
-		    ], {duration, fill: 'forwards', ease: 'ease-in'})
-		    setTimeout(res, duration);
-		  })
-		}
-
-		const fadeContent = (element, opacity, duration = 300) => {
-			return new Promise(res => {
-				[...element.children].forEach((child) => {
-					requestAnimationFrame(() => {
-						child.style.transition = `opacity ${duration}ms linear`;
-						child.style.opacity = opacity;
-					});
-				})
-				setTimeout(res, duration);
-			})
-		}
-
-		const getCardContent = (title, type) => {
-			return `
-				<div class="card-content">
-					<h2>${title}</h2>
-					<div class="center"><img src="/images/iceland.jpg" alt="${title}"></div>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eum ipsa molestiae nesciunt nostrum porro
-						reprehenderit? Animi corporis deleniti dolore laborum, nemo pariatur temporibus voluptatem.
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eligendi fuga ullam? Aperiam blanditiis
-						cupiditate dicta eius exercitationem explicabo fugit, impedit iure libero nam nihil nisi perferendis
-						provident quaerat repellendus vitae voluptate? Aliquid amet architecto asperiores aut consequuntur
-						corporis debitis ea eveniet in maiores, nam placeat quae, ratione rerum ullam?
-					</p>
-				</div>
-			`;
-		}
-
-		const onCardClick = async (e) => {
-			const card = e.currentTarget;
-			// clone the card
-			const cardClone = card.cloneNode(true);
-			// get the location of the card in the view
-			const {top, left, width, height} = card.getBoundingClientRect();
-			// position the clone on top of the original
-			cardClone.style.position = 'fixed';
-			cardClone.style.top = top + 'px';
-			cardClone.style.left = left + 'px';
-			cardClone.style.width = width + 'px';
-			cardClone.style.height = height + 'px';
-			// hide the original card with opacity
-			card.style.opacity = '0';
-			// add card to the same container
-			card.parentNode.appendChild(cardClone);
-			// create a close button to handle the undo
-			const closeButton = document.createElement('button');
-			// position the close button top corner
-			closeButton.style = `
-            position: absolute;
-            right: 32px;
-            top: 32px;
-            width: 32px;
-            height: 32px;
-            opacity: 0.6;
-			`;
-			// attach click event to the close button
-			closeButton.addEventListener('click', async () => {
-				// remove the button on close
-				closeButton.remove();
-				// remove the display style so the original content is displayed right
-				cardClone.style.removeProperty('display');
-				cardClone.style.removeProperty('padding');
-				// show original card content
-				[...cardClone.children].forEach(child => child.style.removeProperty('display'));
-				fadeContent(cardClone, '0');
-				// shrink the card back to the original position and size
-				await toggleExpansion(cardClone, {top: `${top}px`, left: `${left}px`, width: `${width}px`, height: `${height}px`}, 300)
-				// show the original card again
-				card.style.removeProperty('opacity');
-				// remove the clone card
-				cardClone.remove();
-			});
-			// fade the content away
-			fadeContent(cardClone, '0')
-				.then(() => {
-					[...cardClone.children].forEach(child => child.style.display = 'none');
-				});
-			// expand the clone card
-			await toggleExpansion(cardClone, {top: 0, left: 0, width: '100vw', height: '100vh'});
-			const content = getCardContent(card.textContent, card.dataset.type)
-			// set the display block so the content will follow the normal flow in case the original card is not display block
-			cardClone.style.display = 'block';
-			cardClone.style.padding = '0';
-			// append the close button after the expansion is done
-			cardClone.appendChild(closeButton);
-			cardClone.insertAdjacentHTML('afterbegin', content);
-		};
-
-		cards.forEach(card => card.addEventListener('click', onCardClick));
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="js/barba.js"></script>
 </body>
 </html>
+ 
