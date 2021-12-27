@@ -177,7 +177,7 @@ a{
     justify-content: center;
     align-content: center;
     align-items: center;
-    margin-top: 20rem;
+    margin-top: 30rem;
   }
 section{
     width: 100%;
@@ -214,7 +214,7 @@ section{
     height: 8rem;
 }
 .skills-list > .hide > li {
-    font-size: 1.75em;
+    font-size: 5.75rem;
     font-weight: 700;
     text-shadow: -1px 0 white, 
     0 1px white, 1px 0 white, 0 -1px white;
@@ -228,7 +228,7 @@ section{
     color: black;   
 }
 .skills-list > .hide-desk > li {
-    font-size: .9em;
+    font-size: 2.80rem;
     font-weight: 700;
     text-shadow: -1px 0 white, 
     0 1px white, 1px 0 white, 0 -1px white;
@@ -534,7 +534,7 @@ body::-webkit-scrollbar {
         margin: 0 auto;
         width: 85%;
         max-width: 100%;
-        padding-top: 80rem;
+        padding-top: 90rem;
         padding-bottom: 10rem;
     }
     article .column h1{
@@ -555,7 +555,7 @@ body::-webkit-scrollbar {
         width: 95%;
         height: auto;
         max-width: 100%;
-        margin-top: 35rem;
+        margin-top: 40rem;
         word-wrap: normal;
         word-break: break-all;
     }
