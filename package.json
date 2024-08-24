@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/andressbolivarr/Portfolio#readme",
   "dependencies": {
-    "@barba/core": "^2.9.7"
+    "@barba/core": "^2.10.2"
   }
 }
